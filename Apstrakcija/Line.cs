@@ -18,21 +18,25 @@ namespace Apstrakcija
     }
     class Line
     {
+    
         public Line(double k, double l)
         {
-            this.k = k;
-            this.l = l;
+            a = -k;
+            c = -l;
+            b = 1;
         }
         public Line(Point p1, Point p2)
         {
-            k = (p2.Y - p1.Y) / (p2.X - p1.X);
-            l = (p2.X * p1.Y - p1.X * p2.Y) / (p2.X - p1.X);
+            a = p1.Y - p2.Y;
+            b = p2.X - p1.X;
+            c = p1.X * p2.Y - p2.X * p1.Y;
         }
         public double Y(double x)
         {
-            return k * x + l;
+            return -a / b * x - c / b;
         }
-        private double k;
-        private double l;
+        private double a;
+        private double b;
+        private double c;
     }
 }
