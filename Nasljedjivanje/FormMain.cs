@@ -16,5 +16,17 @@ namespace Nasljeđivanje
         {
             InitializeComponent();
         }
+
+        private void textBoxAdress_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+            {
+                if(tb.TextLength == 0)
+                {
+                    TextRenderer.DrawText(tb.CreateGraphics(), "Default value", tb.Font, tb.ClientRectangle, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
+                }
+            }
+        }
     }
 }
