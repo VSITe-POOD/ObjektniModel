@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Apstrakcija
 {
-    class Program
+    class Line
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
