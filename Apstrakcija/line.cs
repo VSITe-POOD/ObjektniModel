@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace Apstrakcija
 {
-    class Line
+    interface ICurve
     {
+        double Y(double x);
+    }
+    class Line : ICurve
+    {
+        public Line(double slope, double yInterception)
+        {
+            this.slope = slope;
+            this.yInterception = yInterception;
+        }
+        public double Y(double x)
+        {
+            return slope * x + yInterception;
+        }
+
+        private double slope;
+        private double yInterception;
     }
 }
