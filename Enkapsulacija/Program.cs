@@ -10,6 +10,17 @@ namespace Enkapsulacija
     {
         static void Main(string[] args)
         {
+            Line line = new Line(1, -1);
+            for (int i = -10; i <= 10; ++i)
+            {
+                Console.WriteLine($"(x={i}, y={line.Y(i)}");
+            }
+
+            Line line2 = new Line(0, 2);
+            foreach (Point p in line.GetIntersection(line2))
+                Console.WriteLine(p);
+
+            Console.ReadKey();
         }
     }
 }

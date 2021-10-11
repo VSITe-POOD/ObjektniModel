@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Apstrakcija
+namespace Enkapsulacija
 {
     interface ICurve
     {
@@ -20,7 +20,7 @@ namespace Apstrakcija
     {
         public Point(double x, double y)
         {
-            this.x = x; 
+            this.x = x;
             this.y = y;
         }
         public override string ToString()
@@ -37,28 +37,38 @@ namespace Apstrakcija
 
         public Line(double slope, double yInterception)
         {
-            this.slope = slope;
-            this.yInterception = yInterception;
+            this.a = -slope;
+            this.b = 1;
+            this.c = -yInterception;
+        }
+
+        public Line(double a, double b, double c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
         }
 
         public List<Point> GetIntersection(Line other)
         {
             //if (slope == other.slope) new List<Point>();
-            double nominator = this.yInterception - other.yInterception;
-            double denominator = slope - other.slope;
-            double x = nominator / denominator;  //X koordinata sjecišta
-            double y = slope * x + this.yInterception; //Y koordinata sjecišta
-            return new List<Point> { new Point(x, y) };
+            double denominator = a * other.b - other.a * b;
+            double x = b * other.c - other.b * c;
+            double y = c * other.a - other.c * a;      
+            return new List<Point> { new Point(x / denominator, y / denominator) };
         }
 
         public double Y(double x)
         {
-            return slope * x + yInterception;
+            //return slope * x + yInterception;
+            return -a * x / b - c / b;
         }
 
         List<Point> IIntersection.GetIntersection(IIntersection other)
         {
             throw new NotImplementedException();
         }
+
+        public double a, b, c;
     }
 }
