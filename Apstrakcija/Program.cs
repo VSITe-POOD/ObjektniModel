@@ -10,6 +10,13 @@ namespace Apstrakcija
     {
         static void Main(string[] args)
         {
+            Line line = new Line(1, -1);
+            for(int i = -10; i <= 10; ++i)
+            {
+                Console.WriteLine($"(x={i}, y={line.Y(i)}");
+                
+                Console.ReadKey();
+            }
         }
     }
 }
