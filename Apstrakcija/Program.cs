@@ -15,6 +15,12 @@ namespace Apstrakcija
             {
                 Console.WriteLine($"x={x},y={line.Y(x)}");
             }
+            Line line2 = new Line(0, 2);
+           // Console.WriteLine(line.GetIntersection(line2));
+            foreach(var point in line.GetIntersection(line2))
+            {
+                Console.WriteLine(point);
+            }
             Console.ReadLine();
         }
     }
