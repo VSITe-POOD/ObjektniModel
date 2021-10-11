@@ -14,9 +14,13 @@ namespace Apstrakcija
             for(int i = -10; i <= 10; ++i)
             {
                 Console.WriteLine($"(x={i}, y={line.Y(i)}");
-                
-                Console.ReadKey();
             }
+
+            Line line2 = new Line(0, 2);
+            foreach (Point p in line2.GetIntersection(line2))
+                Console.WriteLine(p);
+
+            Console.ReadKey();
         }
     }
 }
