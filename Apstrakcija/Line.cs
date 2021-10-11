@@ -10,7 +10,29 @@ namespace Apstrakcija
     {
         double Y(double x);
     }
-    class Line : ICurve
+
+    interface IIntersection
+    {
+        List<Point> GetIntersection(IIntersection other);
+    }
+
+    struct Point
+    {
+        public Point(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
+        }
+
+        public readonly double X;
+        public readonly double Y;
+    }
+    class Line : ICurve, IIntersection
     {
         public Line(double slope, double yInterception)
         {
@@ -20,6 +42,20 @@ namespace Apstrakcija
         public double Y(double x)
         {
             return slope * x + yInterception;
+        }
+
+        public List<Point> GetIntersection(Line other)
+        {
+            if (slope == other.slope)
+                return new List<Point>();
+            double x = 0; // TODO: x koordinata sjecišta
+            double y = 0; // TODO: y koordinata sjecišta
+            return new List<Point> { new Point(x, y) };
+        }
+
+        List<Point> IIntersection.GetIntersection(IIntersection other)
+        {
+            throw new NotImplementedException();
         }
 
         private double slope;
