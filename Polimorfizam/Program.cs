@@ -10,6 +10,26 @@ namespace Polimorfizam
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Želite li log u (D)atoteku ili (E)kran ili (O)ba");
+            var izbor = Console.ReadLine().ToUpper();
+            switch (izbor[0])
+            {
+                case 'E':
+                    {
+                        logger = new ConsoleLog();
+                        break;
+                    }
+                case 'D':
+                    {
+                        logger = new FileLog();
+                        break;
+                    }
+                case 'O':
+                    {
+                        logger = new CompositeLog();
+                        break;
+                    }
+            }
             logger.Output("Start in Main");
             Metoda1(1);
             Metoda1(4);
@@ -37,6 +57,6 @@ namespace Polimorfizam
 
         }
 
-        static Log logger = new Log();
+        static Log logger;
     }
 }
