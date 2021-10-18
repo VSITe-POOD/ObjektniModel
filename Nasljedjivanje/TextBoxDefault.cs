@@ -18,15 +18,15 @@ namespace Nasljeđivanje
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            if (TextLength == 0)
+            SetStyle(ControlStyles.UserPaint, TextLength == 0);
                 DrawDefaultText(e.Graphics);
         }
 
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
-            if (TextLength == 0)
-                Invalidate();
+            SetStyle(ControlStyles.UserPaint, TextLength == 0);
+            Invalidate();
         }
         private void DrawDefaultText(System.Drawing.Graphics g)
         {
