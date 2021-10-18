@@ -51,7 +51,6 @@ namespace Polimorfizam
             logger.Output("Start in metodaNeparna");
         }
 
-        static bool toFile;
         static Log logger = new ConsoleLog();
     }
 }
