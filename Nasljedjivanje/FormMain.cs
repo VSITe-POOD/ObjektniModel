@@ -16,5 +16,6 @@ namespace Nasljeđivanje
         {
             InitializeComponent();
         }
+
     }
 }
