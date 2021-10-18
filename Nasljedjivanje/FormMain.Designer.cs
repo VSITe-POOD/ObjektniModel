@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxDefault1 = new Nasljeđivanje.TextBoxDefault();
-            this.textBox2 = new TextBoxDefault();
+            this.textBox2 = new Nasljeđivanje.TextBoxDefault();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +70,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 44);
+            this.textBox2.DefaultText = "Default";
+            this.textBox2.Location = new System.Drawing.Point(243, 44);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 4;
@@ -98,7 +99,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private TextBoxDefault textBox2;
     }
 }
 
