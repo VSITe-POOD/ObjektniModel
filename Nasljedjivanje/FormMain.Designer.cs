@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textboxDefault1 = new Nasljeđivanje.TextboxDefault();
+            this.textBox2 = new TextboxDefault();
             this.SuspendLayout();
             // 
             // textBox1
@@ -61,21 +62,30 @@
             // 
             // textboxDefault1
             // 
+            this.textboxDefault1.DefaultText = "Default text";
             this.textboxDefault1.Location = new System.Drawing.Point(170, 48);
             this.textboxDefault1.Name = "textboxDefault1";
             this.textboxDefault1.Size = new System.Drawing.Size(100, 22);
             this.textboxDefault1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(586, 130);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 4;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textboxDefault1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "Main Form";
             this.ResumeLayout(false);
@@ -89,6 +99,7 @@
         private TextboxDefault textboxDefault1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
