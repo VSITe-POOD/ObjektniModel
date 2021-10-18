@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,8 +30,13 @@ namespace Nasljeđivanje
         }
         private void DrawDefaultText(System.Drawing.Graphics g)
         {
-            TextRenderer.DrawText(g, defaultText, Font, ClientRectangle, SystemColorsChanged);
+            TextRenderer.DrawText(g, defaultText, Font, ClientRectangle, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
 
+        }
+        public string DefaultText
+        {
+            get { return defaultText;  }
+            set { defaultText = value; }
         }
         private string defaultText = "Default value";
     }

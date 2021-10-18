@@ -32,10 +32,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new TextBoxDefault();
             this.SuspendLayout();
             // 
             // textBoxDefault1
             // 
+            this.textBoxDefault1.DefaultText = "Default value";
             this.textBoxDefault1.Location = new System.Drawing.Point(539, 97);
             this.textBoxDefault1.Name = "textBoxDefault1";
             this.textBoxDefault1.Size = new System.Drawing.Size(100, 22);
@@ -67,16 +69,24 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "TextBox:";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(882, 91);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 4;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxDefault1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMain";
             this.Text = "Main Form";
             this.Load += new System.EventHandler(this.FormMain_Load);
@@ -91,6 +101,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
