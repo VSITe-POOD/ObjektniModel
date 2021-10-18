@@ -3,14 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Polimorfizam
 {
-    class Log
+    abstract class Log
     {
-        public void Output(String message)
+        public abstract void Output(String message);
+    }
+    class ConsoleLog : Log
+    {
+        public override void Output(string message)
         {
             Console.WriteLine(message);
         }
+    }
+    class FileLog : Log
+    {
+        public FileLog()
+        {
+            writer.AutoFlush=true;
+        }
+        public override void Output(string message)
+        {
+            writer.WriteLine(message);
+        }
+        StreamWriter writer = new StreamWriter("Log.txt");
+    }
+    class CompositeLogger : Log
+    {
+        public CompositeLogger(/*List<Log> loggers*/)
+        {
+            //this.loggers = loggers;
+            loggers.Add(new ConsoleLog());
+            loggers.Add(new FileLog());
+        }
+        public void AddLogger(Log logger)
+        {
+            loggers.Add(logger);
+        }
+        public override void Output(string message)
+        {
+            foreach(var logger in loggers)
+            {
+                logger.Output(message);
+            }
+        }
+        List<Log> loggers = new List<Log>();
     }
 }
