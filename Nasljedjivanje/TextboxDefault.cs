@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Nasljeđivanje
 {
@@ -27,15 +28,26 @@ namespace Nasljeđivanje
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
-            if(TextLength == 0)
-            {
-                Invalidate();
-            }
+            SetStyle(ControlStyles.UserPaint, TextLength == 0);
+            Invalidate();
         }
 
         private void DrawDefaultText(System.Drawing.Graphics graphics)
         {
-            TextRenderer.DrawText(graphics, defaultText, Font, this.Bounds, System.Drawing.Color.Black, System.Drawing.Color.White);
+            TextRenderer.DrawText(graphics, defaultText, Font, ClientRectangle, SystemColors.GrayText, TextFormatFlags.TextBoxControl);
+        }
+
+        public string DefaultText
+        {
+            set
+            {
+                this.defaultText = value;
+            }
+
+            get
+            {
+                return this.defaultText;
+            }
         }
 
         private string defaultText = "Default text";
