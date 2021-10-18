@@ -29,7 +29,7 @@ namespace Nasljeđivanje
         }
         private void DrawDefaultText(System.Drawing.Graphics g)
         {
-            TextRenderer.DrawText(g, defaultText, Font, ClientRectangle, SystemColors.);
+            TextRenderer.DrawText(g, defaultText, Font, ClientRectangle, SystemColorsChanged);
 
         }
         private string defaultText = "Default value";
