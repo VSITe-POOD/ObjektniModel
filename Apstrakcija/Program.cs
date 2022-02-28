@@ -1,50 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Apstrakcija
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //try
-            //{
-            //    double k1 = double.Parse(args[0]);
-            //    double l1 = double.Parse(args[1]);
-            //    double k2 = double.Parse(args[2]);
-            //    double l2 = double.Parse(args[3]);
+            var l1 = new Line(1, 0);
+            var l2 = new Line(0, 1);
 
-            //    if (k1 == k2)
-            //        Console.WriteLine("Lines are parallel");
-            //    else
-            //    {
-            //        double x = (l2 - l1) / (k1 - k2);
-            //        double y = k1 * x + l1;
-            //        Console.WriteLine($"Intersection: ({x}, {y})");
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("Invalid entry");
-            //}
+            var p1 = l1.Intersection(l2);
 
-            Line l1 = new Line(1, 0);
-            Line l2 = new Line(0, 1);
-
-            Point? p = l1.Intersection(l2);
-
-            if (p.HasValue)
+            if (p1.HasValue)
             {
-                Console.WriteLine($"Intersection: ({p.Value.X}, {p.Value.Y})");
+                Console.WriteLine($"Intersection L1 Vs L2: ({p1.Value.X}, {p1.Value.Y})");
             }
             else
             {
                 Console.WriteLine($"Lines are parallel");
             }
-            
+
+            var p2 = l2.Intersection(l1);
+
+            if (p2.HasValue)
+            {
+                Console.WriteLine($"Intersection L2 vs L1: ({p2.Value.X}, {p2.Value.Y})");
+            }
+            else
+            {
+                Console.WriteLine($"Lines are parallel");
+            }
+
+            Console.ReadLine();           
         }
     }
 }

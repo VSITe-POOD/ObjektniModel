@@ -1,6 +1,6 @@
 ﻿namespace Apstrakcija
 {
-    struct Point
+    public struct Point
     {
         public Point(double x, double y)
         {
@@ -12,26 +12,26 @@
         public readonly double Y;
     }
 
-    class Line
+    public class Line
     {
-        public readonly double k;
-        public readonly double l;
+        private readonly double K;
+        private readonly double L;
 
         public Line(double k, double l)
         {
-            this.k = k;
-            this.l = l;
+            this.K = k;
+            this.L = l;
         }
 
         public Point? Intersection(Line other)
         {
-            if (this.k == other.k)
+            if (this.K == other.K)
             {
                 return null;
             }
 
-            double x = (other.l - l) / (k - other.k);
-            double y = k * x + l;
+            var x = (other.L - this.L) / (this.K - other.K);
+            var y = this.K * x + this.L;
 
             return new Point(x, y);
         }
