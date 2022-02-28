@@ -36,9 +36,9 @@ namespace Apstrakcija
             Line l2 = new Line(0, 1);
             Point? p = l1.Intersection(l2);
             if (p.HasValue)
-                Console.WriteLine("Has value");
+                Console.WriteLine($"Intersection: ({p.Value.X}, {p.Value.Y})");
             else
-                Console.WriteLine("It doesnt!");
+                Console.WriteLine("Lines parallel");
         }
     }
 }
