@@ -27,7 +27,7 @@ namespace Apstrakcija
             this.L = l;
         }
 
-        Point? Intersection(Line other)
+        public Point? Intersection(Line other)
         {
             if (this.K == other.K)
             {
