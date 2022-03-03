@@ -27,6 +27,18 @@ namespace Apstrakcija
             this.L = l;
         }
 
+        Point? Intersection(Line other)
+        {
+            if (this.K == other.K)
+            {
+                return null;
+            }
+
+            double x = (other.L - this.L) / (this.K - other.K);
+            double y = this.K * x + this.L;
+            return new Point(x, y);
+        }
+
         public readonly double K;
         public readonly double L;
     }
