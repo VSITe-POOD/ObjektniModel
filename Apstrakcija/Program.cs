@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Apstrakcija
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -31,13 +31,16 @@ namespace Apstrakcija
             //{
               //  Console.WriteLine("Invalid entry");
             //}
-            Line l1 = new Line(1,0);
-            Line l2 = new Line(0,1);
-            Point? p = l1.Intersection(l2);
+            var l1 = new Line(1,0);
+            var l2 = new Line(0,1);
+            var p = l1.Intersection(l2);
             if (p.HasValue)
                 Console.WriteLine($"Intersection: ({p.Value.X}, {p.Value.Y})");
             else
                 Console.WriteLine("Lines are parallel");
+            
+            Console.ReadLine();     
+
         }
     }
 }

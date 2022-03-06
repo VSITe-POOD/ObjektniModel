@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Apstrakcija
 {
-	struct Point
+	public struct Point
 	{
 		public Point(double x, double y)
 		{
@@ -17,7 +13,7 @@ namespace Apstrakcija
 		public readonly double Y;
 	}
 
-	class Line
+	public class Line
 	{
 		public Line(double k, double l)
 		{
