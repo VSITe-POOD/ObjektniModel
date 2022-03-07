@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxDefault1 = new Nasljeđivanje.TextBoxDefault();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new Nasljeđivanje.TextBoxDefault();
             this.SuspendLayout();
             // 
             // textBox1
