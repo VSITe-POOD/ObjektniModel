@@ -10,6 +10,7 @@ namespace Enkapsulacija
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

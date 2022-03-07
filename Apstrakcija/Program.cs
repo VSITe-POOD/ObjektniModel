@@ -33,14 +33,14 @@ namespace Apstrakcija
             //}
             var l1 = new Line(1,0);
             var l2 = new Line(0,1);
-            var p = l1.Intersection(l2);
+            Point? p = l1.Intersection(l2);
             if (p.HasValue)
                 Console.WriteLine($"Intersection: ({p.Value.X}, {p.Value.Y})");
             else
                 Console.WriteLine("Lines are parallel");
             
             Console.ReadLine();     
-
+            
         }
     }
 }
