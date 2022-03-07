@@ -35,7 +35,7 @@ namespace Apstrakcija
                 return null;
             }
 
-            double x = (other.l - l) / (other.k - k);
+            double x = (other.l - l) / (k - other.k);
             double y = k * x + l;
 
             return new Point(x, y);
