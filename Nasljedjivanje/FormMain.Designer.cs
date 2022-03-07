@@ -30,6 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBoxDefault1 = new Nasljeđivanje.TextBoxDefault();
+            this.textBox2 = new Nasljeđivanje.TextBoxDefault();
             this.SuspendLayout();
             // 
             // textBox1
@@ -46,11 +47,19 @@
             this.textBoxDefault1.Size = new System.Drawing.Size(100, 20);
             this.textBoxDefault1.TabIndex = 1;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(12, 99);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(317, 20);
+            this.textBox2.TabIndex = 2;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBoxDefault1);
             this.Controls.Add(this.textBox1);
             this.Name = "FormMain";
@@ -64,6 +73,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private TextBoxDefault textBoxDefault1;
+        private TextBoxDefault textBox2;
     }
 }
 
