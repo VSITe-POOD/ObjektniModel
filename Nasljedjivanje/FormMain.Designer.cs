@@ -28,20 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDefault1 = new Nasljeđivanje.TextBoxDefault();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBoxDefault1
+            // 
+            this.textBoxDefault1.Location = new System.Drawing.Point(12, 53);
+            this.textBoxDefault1.Name = "textBoxDefault1";
+            this.textBoxDefault1.Size = new System.Drawing.Size(100, 22);
+            this.textBoxDefault1.TabIndex = 1;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.textBoxDefault1);
+            this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.Text = "Main Form";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private TextBoxDefault textBoxDefault1;
     }
 }
 
