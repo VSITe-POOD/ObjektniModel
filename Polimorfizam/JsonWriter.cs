@@ -10,17 +10,17 @@ namespace Polimorfizam
     {
         public void WriteParagraph(string text)
         {
-            Console.WriteLine("\"paragraf\": {text}");
+            Console.WriteLine(" \"paragraf\": " + text + " \n}");
         }
 
         public void WriteHeading1(string caption)
         {
-            Console.WriteLine("\"heading1\": {caption},");
+            Console.WriteLine("{\n \"heading1\": " + caption + ",");
         }
 
         public void WriteHeading2(string caption)
         {
-            Console.WriteLine("\"heading2\": {caption},");
+            Console.WriteLine(" \"heading2\": " + caption + ",");
         }
     }
 }
