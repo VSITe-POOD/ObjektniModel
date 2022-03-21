@@ -1,13 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Polimorfizam
 {
     class StoryTeller
     {
+        IFormatWriter writer;
+
+        public StoryTeller(IFormatWriter writer)
+        {
+            this.writer = writer;
+        }
+
         public void WriteParagraph(string text)
         {
             Console.WriteLine(text);
