@@ -6,27 +6,23 @@ using System.Threading.Tasks;
 
 namespace Polimorfizam
 {
-    class StoryTeller
+    class PlainTextWriter : IFormatWriter
     {
-        private IFormatWriter writer;
-        public StoryTeller(IFormatWriter writer)
-        {
-            this.writer = writer;
-        }
-
         public void WriteParagraph(string text)
         {
-            this.writer.WriteParagraph(text);
+            Console.WriteLine(text);
         }
 
         public void WriteHeading1(string caption)
         {
-            this.writer.WriteHeading1(caption);
+            Console.WriteLine(caption);
+            Console.WriteLine(new string('=', caption.Length));
         }
 
         public void WriteHeading2(string caption)
         {
-            this.writer.WriteHeading2(caption);
+            Console.WriteLine(caption);
+            Console.WriteLine(new string('-', caption.Length));
         }
     }
 }
