@@ -11,8 +11,10 @@ namespace Polimorfizam
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-
-            StoryTeller st = new StoryTeller();
+            //TODO: napraviti JsonWriter koji ce napraviti ispis u json formatu
+            //var writer = new PlainTextWriter();
+            var writer = new HtmlWriter();
+            StoryTeller st = new StoryTeller(writer);
             st.WriteHeading1("Priče iz davnine");
             st.WriteHeading2("Šuma Striborova");
             st.WriteParagraph("Zašao neki momak u šumu Striborovu, a nije znao da je ono šuma začarana i da se u njoj svakojaka čuda zbivaju.");
