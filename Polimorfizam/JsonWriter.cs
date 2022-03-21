@@ -10,7 +10,7 @@ namespace Polimorfizam
     {
         public void WriteParagraph(string text)
         {
-            Console.WriteLine("\"paragraf\": {text},");
+            Console.WriteLine("\"paragraf\": {text}");
         }
 
         public void WriteHeading1(string caption)
@@ -20,7 +20,7 @@ namespace Polimorfizam
 
         public void WriteHeading2(string caption)
         {
-            Console.WriteLine("\"heading2\": {caption}");
+            Console.WriteLine("\"heading2\": {caption},");
         }
     }
 }
