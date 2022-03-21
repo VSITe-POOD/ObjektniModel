@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="HtmlWriter.cs" />
     <Compile Include="IFormatWriter.cs" />
+    <Compile Include="JsonWriter.cs" />
     <Compile Include="PlainTextWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

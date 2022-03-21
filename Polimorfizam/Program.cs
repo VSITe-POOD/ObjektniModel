@@ -13,7 +13,8 @@ namespace Polimorfizam
             Console.OutputEncoding = Encoding.UTF8;
 
             //var writer = new PlainTextWriter();
-            var writer = new HtmlWriter();
+            //var writer = new HtmlWriter();
+            var writer = new JsonWriter();
             StoryTeller st = new StoryTeller(writer);
 
             st.WriteHeading1("Priče iz davnine");
