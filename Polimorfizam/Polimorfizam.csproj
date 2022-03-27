@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HtmlWritter.cs" />
+    <Compile Include="IFormatWritter.cs" />
+    <Compile Include="JsonWritter.cs" />
+    <Compile Include="PlainTextWritter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryTeller.cs" />
