@@ -14,7 +14,9 @@ namespace Polimorfizam
 
             //var writter = new PlainTextWritter();
             // upit console read line PlainTextWritter ot HtmlWritter
-            var writter = new HtmlWritter();
+            //var writter = new HtmlWritter();
+
+            var writter = new JsonWritter();
             StoryTeller st = new StoryTeller(writter);
             st.WriteHeading1("Priče iz davnine");
             st.WriteHeading2("Šuma Striborova");

@@ -12,7 +12,7 @@ namespace Polimorfizam
         {
             Console.WriteLine(text);
         }
-                public void WriteHeading1(string caption)
+        public void WriteHeading1(string caption)
         {
             Console.WriteLine(caption);
             Console.WriteLine(new string('=', caption.Length));
