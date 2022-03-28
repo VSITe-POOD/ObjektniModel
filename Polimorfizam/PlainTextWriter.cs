@@ -1,22 +1,25 @@
-﻿namespace Polimorfizam
+﻿using System;
+
+namespace Polimorfizam
 {
     class PlainTextWriter : IFormatWriter
     {
 
         public void WriteParagraph(string text)
         {
-            writer.WriteParagraph(text);
+            Console.WriteLine(text);
+
         }
 
         public void WriteHeading1(string caption)
         {
-            writer.WriteHeading1(caption);
+            Console.WriteLine(caption);
 
         }
 
         public void WriteHeading2(string caption)
         {
-            writer.WriteHeading2(caption);
+            Console.WriteLine(caption);
 
         }
     }
